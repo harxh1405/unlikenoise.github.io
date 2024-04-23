@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Options</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    #payment-container {
+        width: 400px;
+        margin: 50px 30px; /* Added top and bottom margin */
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        overflow-y: scroll; /* Changed to scroll */
+        max-height: 400px; /* Added maximum height */
+    }
+
+    /* Customizing scrollbar */
+    #payment-container::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+
+    .payment-option {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 20px;
+    }
+
+    .payment-option:last-child {
+        border-bottom: none;
+    }
+
+    .payment-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #8b3dff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .payment-button:hover {
+        background-color: #6a1eb8;
+    }
+</style>
+</head>
+<body>
+    <div id="payment-container">
+        <h1>Select Payment Option</h1> <!-- Moved heading inside the container -->
+        <div class="payment-option">
+            <h2>Credit Card</h2>
+            <p>Pay securely using your credit card.</p>
+            <button class="payment-button" onclick="proceed()">Proceed</button>
+        </div>
+        <div class="payment-option">
+            <h2>Netbanking</h2>
+            <p>Pay using netbanking services.</p>
+            <button class="payment-button" onclick="proceed()">Proceed</button>
+        </div>
+        <div class="payment-option">
+            <h2>UPI ID</h2>
+            <p>Pay using your UPI ID.</p>
+            <button class="payment-button" onclick="proceed()">Proceed</button>
+        </div>
+        <div class="payment-option">
+            <h2>Scan and Pay</h2>
+            <p>Scan the QR code and complete your payment.</p>
+            <button class="payment-button" onclick="proceed()">Proceed</button>
+        </div>
+    </div>
+
+    <script>
+        function proceed() {
+            alert("Proceed to payment...");
+            // Implement your payment logic here
+        }
+    </script>
+</body>
+</html>

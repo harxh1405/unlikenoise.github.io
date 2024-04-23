@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upcoming Events</title>
+<style>
+    :root {
+    --main: rgb(236, 166, 36);
+    --box_shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+    }
+    ::-webkit-scrollbar {
+  width: 10px;
+  height:100vh;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        min-height: 100vh; /* Set minimum height to cover the whole viewport */
+        position: relative;
+        height: 100vh;
+    }
+
+    .container-wrapper {
+        overflow-y: auto;
+        height: calc(100vh - 150px); /* Set container height to fill viewport height minus footer height */
+        
+    }
+
+    .container {
+        width: 80%;
+        margin: 50px auto;
+        /* overflow-y: auto; */  
+        /* height: calc(100vh - 150px); */ /* Set container height to fill viewport height minus footer height */
+        border: 0.1px solid #8b3dff; /* Green border */
+        border-radius: 50px;
+        padding: 10px;
+        background-color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    .container:hover {
+        background-color: #f0f0f0; /* Change background color on hover */
+    }
+
+    .event {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .event img {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+        border-radius: 50%;
+    }
+
+    .event-info {
+        flex: 1;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #8b3dff; /* Green border */
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: white;
+        color: #4CAF50; /* Green text */
+    }
+
+    .navbar {
+        background:linear-gradient(to bottom right,#a570ff, #8b3dff);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin-right: 20px;
+    }
+    
+    .nav-links li a {
+        color:white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    
+    .nav-links li a:hover {
+        text-decoration: underline;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center; /* Aligns logo and text vertically */
+    }
+    
+    .headingmain{
+  text-transform: lowercase;
+  font-weight:700;
+}
+.headingsub{
+  text-transform:uppercase;
+  color:darkblue;
+}
+    .logo-img {
+      width: 70px; /* Adjust width as needed */
+      height: auto; /* Maintains aspect ratio */
+      margin-right: 10px; /* Adjust spacing between logo and text */
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="cheimg/newlogo.png" alt="ECO Grow Logo" class="logo-img">
+            <span class = "headingmain">Unlike</span>
+            <span class = "headingsub">Noise</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/register.html">Registration</a></li>
+            <li><a href="/events.html">For Events</a></li>
+            <li><a href="/noisedata.html">Noise Data</a></li>
+        </ul>
+    </nav>
+<div class="container-wrapper">
+<div class="container">
+    <h1 style="text-align:center;">Upcoming Events </h1>
+    <br>
+    <hr>
+    <div class="event">
+        <img src="/TREE PLANTATION.jpg" alt="Event 1">
+        <div class="event-info">
+            <h3>Event 1: Silent Cities Campaign Launch</h3>
+            <p>Date: April 25, 2024</p>
+            <p>Location: Agriculture Field, LPU</p>
+            <p>Description: Join us for the kickoff of our "Silent Cities" campaign, aimed at raising awareness about the detrimental effects of noise pollution on urban environments.</p>
+            <button style="text-decoration: none; background-color:rgb(9, 223, 9); width:100px; height:50px;"><a href="/register.html" style="text-decoration: none;color:white;">Join US</a></button>
+        </div>
+    </div>
+    <div class="event">
+        <img src="/cam pus clean.jpg" alt="Event 2">
+        <div class="event-info">
+            <h3>Event 2: Noise-Free Weekend Challenge</h3>
+            <p>Date: May 5, 2024</p>
+            <p>Location: Lovely Proffessional  University Campus</p>
+            <p>Description: Take part in our Noise-Free Weekend Challenge and experience the benefits of a quieter environment firsthand. Unplug from unnecessary noise sources, engage in peaceful activities, and share your experiences on social media using #NoiseFreeWeekend.</p>
+            <button style="text-decoration: none; background-color:rgb(9, 223, 9); width:100px; height:50px;"><a href="/register.html" style="text-decoration: none;color:white;">Join US</a></button>
+        </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

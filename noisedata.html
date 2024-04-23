@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepawali Noise Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            border:#8b3dff solid;
+            padding:80px;
+            height:40vh;
+            border-radius: 50px;
+        }
+        #yearSelect {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #fetchDataBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #8b3dff; /* Contrasting color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #fetchDataBtn:hover{
+            background-color: #00008b;
+            
+        }
+        
+        /* .dataBox {
+            background-color: #8b3dff; 
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            color: #fff;
+        } 
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Deepawali Noise Data</h1>
+        <select id="yearSelect">
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+        <button id="fetchDataBtn">Fetch Data</button>
+        <div class="dataBox" id="dataBox"></div>
+    </div>
+
+    <script>
+        document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
+
+        function fetchData() {
+            var year = document.getElementById('yearSelect').value;
+            var url = 'https://cpcb.nic.in/air/Deepawali-' + year + '.pdf';
+            // Simulating fetching data by displaying a message
+            document.getElementById('dataBox').innerHTML = "<p>Noise data for " + year + " is being fetched...</p>";
+            // You can open the PDF in a new tab using the URL if needed
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
